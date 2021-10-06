@@ -14,6 +14,8 @@ std::string NumberToWordsHandler::Handle(std::string number_as_string)
 
     GroupedNumber grouped_number(raw_number); 
 
+    // TODO MAIN TASK - continue handler process
+
 }
 
 RawNumber NumberToWordsHandler::ParseRawNumber(std::string number_as_string)
