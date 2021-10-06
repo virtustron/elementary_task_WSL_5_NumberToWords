@@ -13,5 +13,4 @@ ThreeDigitGroup::ThreeDigitGroup(const int digit_group)
     }
 
     m_digit_group = digit_group;
-
 }

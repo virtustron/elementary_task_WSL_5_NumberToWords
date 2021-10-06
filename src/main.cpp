@@ -1,7 +1,3 @@
-
-// main idea originally form: 
-//   http://www.blackwasp.co.uk/NumberToWords_2.aspx
-
 #include <iostream>
 
 
