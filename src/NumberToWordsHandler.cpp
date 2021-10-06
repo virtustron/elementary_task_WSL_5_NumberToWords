@@ -12,6 +12,8 @@ std::string NumberToWordsHandler::Handle(std::string number_as_string)
         return number_in_words;
     }
 
+    GroupedNumber grouped_number(raw_number); 
+
 }
 
 RawNumber NumberToWordsHandler::ParseRawNumber(std::string number_as_string)

@@ -1,8 +1,11 @@
-#include "SpokenNumber.hpp"
+#include "GroupedNumber.hpp"
 
 
-SpokenNumber::SpokenNumber(int number)
+GroupedNumber::GroupedNumber(RawNumber raw_number)
 {
+    // here must be abstraction of "int" number
+    int number = raw_number.get_number();
+
     // m_is_negative = (number < 0);
     if (number < 0)
     {
@@ -17,7 +20,7 @@ SpokenNumber::SpokenNumber(int number)
     ExtractThreeDigitGroups(number);
 }
 
-void SpokenNumber::ExtractThreeDigitGroups(int number)
+void GroupedNumber::ExtractThreeDigitGroups(int number)
 {
     for (int i = 0; i < 4; i++)
     {
