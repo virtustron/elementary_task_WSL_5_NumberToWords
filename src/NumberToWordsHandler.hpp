@@ -7,6 +7,7 @@
 #include <string>
 #include "RawNumber.hpp"
 #include "GroupedNumber.hpp"
+#include "GroupedNumberWords.hpp"
 
 class NumberToWordsHandler
 {

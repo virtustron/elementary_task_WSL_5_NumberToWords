@@ -2,12 +2,13 @@
 
 #include <string.h>
 #include "GroupedNumber.hpp"
+#include "NumberWordsDictionary.hpp"
 
 class GroupedNumberWords
 {
 public:
     GroupedNumberWords();
-    GroupedNumberWords(GroupedNumber grouped_number);
+    GroupedNumberWords(GroupedNumber grouped_number, NumberWordsDictionary number_words_dictionary);
     std::string get_words();
 
 private:

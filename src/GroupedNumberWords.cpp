@@ -5,11 +5,13 @@
         m_words = "";
     }
 
-    GroupedNumberWords::GroupedNumberWords(GroupedNumber grouped_number): GroupedNumberWords()
+    GroupedNumberWords::GroupedNumberWords(GroupedNumber grouped_number, NumberWordsDictionary number_words_dictionary)
+    
     {
+        GroupedNumberWords();
+        
         m_grouped_number = grouped_number;
         ConvertGroupedNumberToWords();
-
     }
     
     std::string GroupedNumberWords::get_words()

@@ -7,9 +7,10 @@ all: main
 # “-g ”: Generates debugging information
 
 main: build_all
-	g++ -g -o $(bin)main $(bin)main.o $(bin)ThreeDigitGroup.o $(bin)RawNumber.o $(bin)NumberToWordsHandler.o $(bin)GroupedNumberWords.o $(bin)GroupedNumber.o
+	g++ -g -o $(bin)main $(bin)main.o $(bin)ThreeDigitGroup.o $(bin)RawNumber.o $(bin)NumberToWordsHandler.o $(bin)GroupedNumberWords.o $(bin)GroupedNumber.o $(bin)NumberWordsDictionary.o
 
 build_all:
+	g++ -g -o $(bin)NumberWordsDictionary.o -c $(src)NumberWordsDictionary.cpp
 	g++ -g -o $(bin)GroupedNumber.o -c $(src)GroupedNumber.cpp
 	g++ -g -o $(bin)GroupedNumberWords.o -c $(src)GroupedNumberWords.cpp
 	g++ -g -o $(bin)NumberToWordsHandler.o -c $(src)NumberToWordsHandler.cpp
