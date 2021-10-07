@@ -5,6 +5,7 @@
 class ThreeDigitGroup
 {
 public:
+    ThreeDigitGroup();
     ThreeDigitGroup(const int digit_group);
 
 private:

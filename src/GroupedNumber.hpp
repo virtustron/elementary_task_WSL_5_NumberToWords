@@ -9,6 +9,7 @@ const int COUNT_THREE_DIGIT_GROUPS_FOR_INT_NUMBER = 4; // because of: INT_MAX ==
 class GroupedNumber
 {
 public:
+    GroupedNumber();
     GroupedNumber(RawNumber raw_number);
 
 private:

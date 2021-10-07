@@ -1,6 +1,11 @@
 #include "ThreeDigitGroup.hpp"
 
-ThreeDigitGroup::ThreeDigitGroup(const int digit_group)
+ThreeDigitGroup::ThreeDigitGroup()
+{
+    m_digit_group = 0;
+}
+
+ThreeDigitGroup::ThreeDigitGroup(const int digit_group) : ThreeDigitGroup()
 {
     try {
         set_digit_group(digit_group);  

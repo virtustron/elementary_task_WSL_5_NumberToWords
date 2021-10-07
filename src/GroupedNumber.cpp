@@ -1,7 +1,11 @@
 #include "GroupedNumber.hpp"
 
+GroupedNumber::GroupedNumber()
+{
+    m_is_negative = false;
+}
 
-GroupedNumber::GroupedNumber(RawNumber raw_number)
+GroupedNumber::GroupedNumber(RawNumber raw_number) : GroupedNumber()
 {
     // here must be abstraction of "int" number
     int number = raw_number.get_number();

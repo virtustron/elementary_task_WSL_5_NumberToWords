@@ -17,6 +17,4 @@ private:
     RawNumber ParseRawNumber(std::string number_as_string);
     bool CanApplyZeroRule(RawNumber raw_number);
     std::string ApplyZeroRule(RawNumber raw_number);
-
-
 };
