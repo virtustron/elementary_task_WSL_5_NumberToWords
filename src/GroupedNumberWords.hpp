@@ -13,8 +13,10 @@ public:
 
 private:
     GroupedNumber m_grouped_number;
+    NumberWordsDictionary m_number_words_dictionary;
     std::string m_words;
        
     void ConvertGroupedNumberToWords();
-    std::string ConvertGroupedNumberToWords(GroupedNumber m_grouped_number);
+    std::string ConvertGroupedNumberToWords(GroupedNumber m_grouped_number, 
+                                            NumberWordsDictionary number_words_dictionary);
 };

@@ -17,7 +17,7 @@ std::string NumberToWordsHandler::Handle(std::string number_as_string)
 {
     std::string number_in_words = "";
     
-    // 1z
+    // 1
     RawNumber raw_number = ParseRawNumber(number_as_string);
 
     // 2

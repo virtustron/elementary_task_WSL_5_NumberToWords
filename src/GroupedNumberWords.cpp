@@ -21,10 +21,11 @@
 
     void GroupedNumberWords::ConvertGroupedNumberToWords()
     {
-        m_words = ConvertGroupedNumberToWords(m_grouped_number);
+        m_words = ConvertGroupedNumberToWords(m_grouped_number, m_number_words_dictionary);
     }
     
-    std::string GroupedNumberWords::ConvertGroupedNumberToWords(GroupedNumber m_grouped_number)
+    std::string GroupedNumberWords::ConvertGroupedNumberToWords(GroupedNumber m_grouped_number,
+                                                                NumberWordsDictionary number_words_dictionary)
     {
         std::string number_in_words = "";
         
