@@ -13,7 +13,8 @@
 
     */
 
-std::string NumberToWordsHandler::Handle(std::string number_as_string)
+// TODO change to: const ref to string
+std::string NumberToWordsHandler::Handle(std::string const& number_as_string, NumberWordsDictionary number_words_dictionary)
 {
     std::string number_in_words = "";
     
@@ -21,9 +22,9 @@ std::string NumberToWordsHandler::Handle(std::string number_as_string)
     RawNumber raw_number = ParseRawNumber(number_as_string);
 
     // 2
-    if (CanApplyZeroRule(raw_number))
+    if (raw_number.get_number() == ZERO)
     {
-        number_in_words = ApplyZeroRule(raw_number);
+        number_in_words = FindZeroWord(number_words_dictionary);
         return number_in_words;
     }
 
@@ -31,8 +32,6 @@ std::string NumberToWordsHandler::Handle(std::string number_as_string)
     GroupedNumber grouped_number(raw_number); 
 
     // 4 - 6
-    NumberWordsDictionary number_words_dictionary;
-
     GroupedNumberWords grouped_number_words(grouped_number, number_words_dictionary);
     number_in_words = grouped_number_words.get_words();
 
@@ -40,7 +39,7 @@ std::string NumberToWordsHandler::Handle(std::string number_as_string)
 }
 
 
-RawNumber NumberToWordsHandler::ParseRawNumber(std::string number_as_string)
+RawNumber NumberToWordsHandler::ParseRawNumber(const std::string & number_as_string)
 {
     RawNumber raw_number;
     
@@ -52,20 +51,7 @@ RawNumber NumberToWordsHandler::ParseRawNumber(std::string number_as_string)
     return raw_number;
 }
 
-
-bool NumberToWordsHandler::CanApplyZeroRule(RawNumber raw_number)
+std::string NumberToWordsHandler::FindZeroWord(const NumberWordsDictionary& number_words_dictionary)
 {
-    bool is_zero = (raw_number.get_number() == 0);
-    
-    return is_zero;
-}
-
-std::string NumberToWordsHandler::ApplyZeroRule(RawNumber raw_number)
-{
-    std::string number_in_words;
-    
-    // TODO create and use some kind of dictionary for Num2Words converting "zero"
-    number_in_words = "Zero";
-
-    return number_in_words;
+    return number_words_dictionary.get_small_number_word(ZERO);
 }

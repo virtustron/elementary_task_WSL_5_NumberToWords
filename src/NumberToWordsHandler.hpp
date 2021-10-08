@@ -8,14 +8,17 @@
 #include "RawNumber.hpp"
 #include "GroupedNumber.hpp"
 #include "GroupedNumberWords.hpp"
+#include "NumberWordsDictionary.hpp"
+
+const int ZERO = 0;
 
 class NumberToWordsHandler
 {
 public:
-    std::string Handle(std::string number_as_string);
+    std::string Handle(std::string const& number_as_string, NumberWordsDictionary number_words_dictionary);
 
 private:
-    RawNumber ParseRawNumber(std::string number_as_string);
-    bool CanApplyZeroRule(RawNumber raw_number);
-    std::string ApplyZeroRule(RawNumber raw_number);
+    // TODO NumberWordsDictionary  field
+    RawNumber ParseRawNumber(const std::string& number_as_string);
+    std::string FindZeroWord(const NumberWordsDictionary& number_words_dictionary);
 };

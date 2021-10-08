@@ -12,7 +12,7 @@ NumberWordsDictionary::~NumberWordsDictionary()
 
 }
 
-std::string NumberWordsDictionary::get_small_number_word(const int small_number_value)
+std::string NumberWordsDictionary::get_small_number_word(const int small_number_value) const 
 {
     std::string small_number_word;
 

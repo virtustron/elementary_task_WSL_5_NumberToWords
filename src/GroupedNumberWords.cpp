@@ -10,8 +10,8 @@
     {
         GroupedNumberWords();
         
-        m_grouped_number = grouped_number;
-        ConvertGroupedNumberToWords();
+        //m_grouped_number = grouped_number;
+         m_words = ConvertGroupedNumberToWords(grouped_number, number_words_dictionary);
     }
     
     std::string GroupedNumberWords::get_words()
